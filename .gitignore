@@ -169,3 +169,4 @@ chrome-win64/
 user_data.json
 
 data/
+*.db
