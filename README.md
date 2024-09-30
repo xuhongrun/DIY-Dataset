@@ -1,7 +1,7 @@
 # DIY-Dataset
 
 ## Getting Started
-```json
+```shell
 pip install -r requirement.txt
 ```
 
