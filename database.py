@@ -14,7 +14,7 @@ class DataBase:
 
     def save(self, table_name: str, data: json):
         # create table
-        self.cur.execute("CREATE TABLE "+table_name+" ( is_self_operated BLOB, brand TEXT, name TEXT NOT NULL, product_name TEXT, product_number TEXT, image TEXT, price NUMERIC, link TEXT, detail TEXT, PRIMARY KEY('name'));")
+        self.cur.execute("CREATE TABLE "+table_name+" ( is_self_operated BLOB, brand TEXT, name TEXT NOT NULL, product_name TEXT, product_number TEXT, image TEXT, price NUMERIC, link TEXT, detail TEXT, PRIMARY KEY('product_number', 'product_name'));")
         print("TABLE %s create success !!!" % table_name)
         self.conn.commit()
 

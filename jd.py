@@ -130,7 +130,7 @@ class JD:
 
 
             try:
-                detail_match = re.match(r'品牌：([：\d\w\(\)\（\）\-\_ \u4e00-\u9fa5]*)\n商品名称：([\d\w\(\)\（\）\-\_ \u4e00-\u9fa5]*)\n商品编号：(\d*)\n', detail)
+                detail_match = re.match(r'品牌：([：\d\w\(\)\（\）\-\_\/\\ \u4e00-\u9fa5]*)\n商品名称：([\d\w\(\)\（\）\-\_\/\\ \u4e00-\u9fa5]*)\n商品编号：(\d*)\n', detail)
 
                 brand = detail_match.group(1).strip()
                 product_name = detail_match.group(2).strip()
@@ -148,8 +148,8 @@ class JD:
             good_data['link'] = str(link)
             good_data['detail'] = detail
 
-            print(good_data)
-            print('*'*20)
+            # print(good_data)
+            # print('*'*20)
 
             data.append(good_data)
 
